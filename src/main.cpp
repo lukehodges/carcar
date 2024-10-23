@@ -2,21 +2,21 @@
 #include "CarControl.h" // Assume the wrapper is in a file named CarControl.h
 #include "UltraSonic.h"
 #include "ServoControl.h"
+
+// Create objects for controlling the car, ultrasonic sensor, and servo
+
 ServoControlWrapper servoControl;
-// car.command 
-// ultrasonicSensor.command
-// servoControl.command
+
 void setup() {
-    delay(1000);
-    servoControl.center();
-    servoControl.sweep(0,180);
-//     for (int i = 0; i < 180;i+=15){
-//         servoControl.setAngle(i);
-//     }
-// }
-}
-void loop(){
+    car.setSpeed(50);
+    // Initialize the servo and set the initial angle to a forward-facing position
+    servoControl.init();
+    servoControl.setAngle(90);  // Assume 90 is the forward-facing direction
+
+    // Initialize the car system (could involve setting pins or initial configurations)
 }
 
+void loop() {
 
-// what is 180 divided by 400 degrees 
+
+}
